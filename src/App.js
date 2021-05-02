@@ -1,10 +1,14 @@
 import React from 'react'
 import "./App.css";
+import MadeWithLove from 'react-made-with-love';
 import logo from"./assets/airdoodle.png";
 import { Canvas } from './Canvas'
 import { ClearCanvasButton } from './ClearCanvasButton';
 import  {Container, Row, Col,Button } from 'reactstrap';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import {
+  CustomInput,
   Collapse,
   Navbar,
   NavbarToggler,
@@ -25,7 +29,7 @@ import {
 
 
 function App() {
- 
+  const percentage = 66;
   return (
     <>
   
@@ -69,7 +73,19 @@ function App() {
         </Col>
         <Col>
         
+       
+       
         <Button style={{marginLeft:"100px",backgroundColor: "#24305C"}}>Calibrate</Button>
+        <Button style={{marginLeft:"200px"}}>Save To Cloud</Button>
+        
+        <h5 style={{textAlign:"center",marginLeft:"800px"}} >Uptime : Nil</h5>
+        <div style={{marginLeft:"800px"}}>
+        <CircularProgressbar value={percentage} text={`${percentage}%`} />;
+        </div>
+
+
+
+
         </Col>
         
         <Col>
@@ -95,8 +111,12 @@ function App() {
         <ClearCanvasButton ></ClearCanvasButton>
         {/* <Button style={{marginLeft:"300px",marginBottom:""}}>Hello</Button> */}
         </Col>
-     
+ 
       </Row>
+      <footer style={{textAlign:"center",marginRight:"150px"}}>
+  <h6 style={{display:"inline"}}>Made with ❤️ At  </h6>
+  <h6 style={{display:"inline"}}>RU Hacks</h6>
+</footer>
 
       </div>
       </div>

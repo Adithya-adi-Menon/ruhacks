@@ -1,7 +1,55 @@
 .mybg{
   background-color:#70B2E6;
   min-height: 100vh;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: url(./assets/cursor.png),auto;
 }
+
+
+svg {
+  display: block;
+  height: 200px;
+  width: 200px;
+  fill: white;
+  width: 33%; 
+}
+
+.propeller {
+  animation-name: spin;
+  animation-duration: .4s;      
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  display: block;
+
+  
+  
+
+}
+
+
+
+#drone {
+	transition: transform 1s ease-in-out;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg); 
+  }
+  to {
+    transform: rotate(360deg); 
+  }
+}
+
+
+
+
+
 
 /* .App {
   text-align: center;
